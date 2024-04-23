@@ -37,7 +37,7 @@ public class EnemySoundManager : MonoBehaviour
 
     private void OnDisable()
     {
-        _enemyHealth.OnEnemyDeath += PlayEnemyDeathSound;
-        _enemyHealth.OnEnemyHit += PlayEnemyHitSound;
+        _enemyHealth.OnEnemyDeath -= PlayEnemyDeathSound;
+        _enemyHealth.OnEnemyHit -= PlayEnemyHitSound;
     }
 }
